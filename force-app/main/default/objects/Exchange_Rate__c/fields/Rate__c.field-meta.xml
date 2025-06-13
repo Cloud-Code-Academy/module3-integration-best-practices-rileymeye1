@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="https://soap.sforce.com/2006/04/metadata">
+    <fullName>Rate__c</fullName>
+    <description>The exchange rate value</description>
+    <externalId>false</externalId>
+    <label>Rate</label>
+    <precision>18</precision>
+    <scale>6</scale>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField> 
