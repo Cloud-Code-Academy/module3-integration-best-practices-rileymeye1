@@ -20,7 +20,8 @@ public class ExchangeRateWrapper {
                 Base_Currency__c = this.base_code,
                 Target_Currency__c = targetCurrency,
                 Rate__c = conversion_rates.get(targetCurrency),
-                External_Id__c = this.base_code + '_' + targetCurrency
+                External_Id__c = this.base_code + '_' + targetCurrency,
+                Last_Updated__c = Datetime.newInstance(Integer.valueof(time_last_update_unix))
             ));
         }
         return exchangeRates;
