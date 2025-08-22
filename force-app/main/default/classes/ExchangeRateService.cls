@@ -8,7 +8,7 @@ public with sharing class ExchangeRateService {
         Exchange_Rate_API_Setting__mdt exchangeRateApiSetting = Exchange_Rate_API_Setting__mdt.getInstance('ACTIVE');
         Http http = new Http();
         HttpRequest req = new HttpRequest();
-        req.setEndpoint('callout:' + NAMED_CREDENTIAL + exchangeRateApiSetting.API_Key__c + '/latest/' + BASE_CURRENCY);
+        req.setEndpoint('callout:' + NAMED_CREDENTIAL + '/' + exchangeRateApiSetting.API_Key__c + '/latest/' + BASE_CURRENCY);
         req.setMethod('GET');
         HttpResponse res = http.send(req);
 
