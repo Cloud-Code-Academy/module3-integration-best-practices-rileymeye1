@@ -16,7 +16,7 @@ public with sharing class ExchangeRateService {
             ExchangeRateWrapper newExchangeRate = ExchangeRateWrapper.parse(res.getBody());
             return newExchangeRate;
         } else if (res.getStatusCode() == 404) {
-			throw new ExchangeRateServiceException('Error: Base Currency: ' + BASE_CURRENCY + ' Not Found');
+			throw new ExchangeRateServiceException('Error: Base Currency: ' + BASE_CURRENCY + ' Not Found.');
 		} else if (res.getStatusCode() >= 500) {
 			throw new ExchangeRateServiceException('Error: Server error occurred. Please try again later.');
 		} else {
